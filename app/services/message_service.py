@@ -33,6 +33,7 @@ class MessageService:
     @staticmethod
     def send_to_chatgpt(prompt):
         api_key = os.getenv('OPENAI_API_KEY')
+        api_url = os.getenv('OPENAI_API_URL')
         if not api_key:
             raise Exception("API key not found in environment variables.")
 
@@ -45,7 +46,7 @@ class MessageService:
             "messages": [{"role": "system", "content": prompt}]
         }
         response = requests.post(
-            "https://api.openai.com/v1/chat/completions",
+            f"{api_url}/v1/chat/completions",
             headers=headers,
             json=payload
         )
