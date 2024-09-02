@@ -1,0 +1,28 @@
+# Python virtual environment
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+.env/
+
+*.py[cod]
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+.eggs/
+
+build/
+dist/
+*.wheel
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environments
+.env
+
+# PyCharm
+.idea/
